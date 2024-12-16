@@ -1,28 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { useLocation, Link } from "react-router-dom";
 
 const Navbar = () => {
-  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState('light'); // Theme state
+  const [theme, setTheme] = useState("light");
+  const location = useLocation(); // Get the current route
 
   // Handle theme change
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   const handleLinkClick = (e, id) => {
     e.preventDefault(); // Prevent default anchor behavior
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" });
     } else {
       console.error(`Section with id '${id}' not found.`);
     }
@@ -30,9 +35,24 @@ const Navbar = () => {
     closeMobileMenu();
   };
 
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+  // Define the navigation links for each route
+  const links =
+    location.pathname === "/blog"
+      ? [
+          { name: "Home", path: "/" },
+          { name: "Categories", id: "categories" },
+          { name: "Featured Posts", id: "featuredposts" },
+          { name: "Recent Posts", id: "recentposts" },
+          { name: "Newsletter", id: "newsletter" },
+        ]
+      : [
+          { name: "Home", id: "home" },
+          { name: "About", id: "about" },
+          { name: "Projects", id: "projects" },
+          { name: "Services", id: "services" },
+          { name: "Contact", id: "contact" },
+          { name: "Blog", path: "/blog" },
+        ];
 
   return (
     <nav className="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 text-white py-2 px-6 shadow-md fixed top-0 left-0 w-full z-50">
@@ -42,7 +62,7 @@ const Navbar = () => {
           style={{ textShadow: "1px 1px 5px rgba(0, 0, 0, 0.7)" }}
           className="text-2xl font-extrabold text-gray-300"
         >
-          <a href="/">Reagan Jake</a>
+          <Link to="/">Reagan Jake</Link>
         </div>
 
         {/* Navigation Links */}
@@ -53,47 +73,27 @@ const Navbar = () => {
               : "hidden md:block"
           }`}
         >
-          <a
-            href="#home"
-            className="block md:inline hover:text-gray-400 font-bold"
-            onClick={(e) => handleLinkClick(e, "home")}
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            className="block md:inline hover:text-gray-400 font-bold"
-            onClick={(e) => handleLinkClick(e, "about")}
-          >
-            About
-          </a>
-          <a
-            href="#projects"
-            className="block md:inline hover:text-gray-400 font-bold"
-            onClick={(e) => handleLinkClick(e, "projects")}
-          >
-            Projects
-          </a>
-          <a
-            href="#services"
-            className="block md:inline hover:text-gray-400 font-bold"
-            onClick={(e) => handleLinkClick(e, "services")}
-          >
-            Services
-          </a>
-          <a
-            href="#contact"
-            className="block md:inline hover:text-gray-400 font-bold"
-            onClick={(e) => handleLinkClick(e, "contact")}
-          >
-            Contact
-          </a>
-          <a
-            href="/blog"
-            className="block md:inline hover:text-gray-400 font-bold"
-          >
-            Blog
-          </a>
+          {links.map((link, index) =>
+            link.id ? (
+              <a
+                key={index}
+                href={`#${link.id}`}
+                className="block md:inline hover:text-gray-400 font-bold"
+                onClick={(e) => handleLinkClick(e, link.id)}
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link
+                key={index}
+                to={link.path}
+                className="block md:inline hover:text-gray-400 font-bold"
+                onClick={closeMobileMenu}
+              >
+                {link.name}
+              </Link>
+            )
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -114,13 +114,11 @@ const Navbar = () => {
         >
           {theme === "light" ? "🌞" : "🌙"}
         </button>
-        {/* <button className="p-1 rounded hover:bg-blue-900 border-gray-200 hover:border-2 focus:outline-none br-1">
-          Join
-        </button> */}
       </div>
     </nav>
   );
 };
 
 export default Navbar;
+
 
