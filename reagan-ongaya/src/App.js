@@ -8,7 +8,7 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import ChatbotButton from './components/ChatBotButton';
 import Loader from './components/Loader';
 
-function AppContent() {
+function App() {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
 
@@ -23,9 +23,8 @@ function AppContent() {
     return () => clearTimeout(timer);
   }, [location.pathname]); // Trigger on route changes
 
-
   return (
-    <>
+    <Router>
       <ScrollToTopButton />
       <ChatbotButton />
       <Loader isVisible={loading} />
@@ -42,14 +41,6 @@ function AppContent() {
         </Routes>
       </div>
       <Footer />
-    </>
-  );
-}
-
-function App() {
-  return (
-    <Router>
-      <AppContent />
     </Router>
   );
 }
