@@ -38,6 +38,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
       </div>
       <Footer />
