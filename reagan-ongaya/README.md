@@ -29,6 +29,6 @@ You may also see any lint errors in the console.
 ## Tailwind setup 
  -- yarn add -D tailwindcss postcss autoprefixer
  -- npx tailwindcss init -p
- -- npm install postcss postcss-loader tailwindcss autoprefixer -D
- -- npm install tailwind-clip-path
+ -- npm install postcss postcss-loader tailwind-clip-path tailwindcss autoprefixer -D
+
 
