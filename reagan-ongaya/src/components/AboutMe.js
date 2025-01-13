@@ -46,7 +46,7 @@ const AboutMe = ({ id }) => {
                         </button>
                         <h2 className="text-2xl font-bold mb-4">My Certificate</h2>
                         <img
-                            src="/ReaganJake.jpg" // Replace with your certificate image path
+                            src="/ReaganJake.jpg" 
                             alt="Certificate"
                             className="w-52 rounded-md"
                         />
@@ -67,52 +67,52 @@ const AboutMe = ({ id }) => {
           <h3 className="text-4xl mb-4 text-center animate__animated animate__fadeIn  font-extrabold  text-gray-900">My Skills</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
             <div className="skill-card p-6 text-center rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-400">
-              <img src="https://img.icons8.com/?size=100&id=t4YbEbA834uH&format=png&color=000000" alt="React" className="mx-auto mb-4"/>
+              <img src="/react.png" alt="React" className="mx-auto mb-4"/>
               <h4 className="text-xl  hover:text-black-400 font-semibold">React</h4>
             </div>
             <div className="skill-card p-4 text-center rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-400">
-              <img src="https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000" alt="Nextjs" className="mx-auto mb-4"/>
+              <img src="/nextjs.png" alt="Nextjs" className="mx-auto mb-4"/>
               <h4 className="text-xl font-semibold">NextJS</h4>
             </div>
             <div className="skill-card p-4 text-center rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-400">
-              <img src="https://img.icons8.com/?size=100&id=t9oCxEN7McHZ&format=png&color=000000" alt="Nodejs" className="mx-auto mb-4"/>
+              <img src="/nodejs.png" alt="Nodejs" className="mx-auto mb-4"/>
               <h4 className="text-xl font-semibold">NodeJS</h4>
             </div>
             <div className="skill-card p-4 text-center rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-400">
-              <img src="https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000" alt="TailwindCSS" className="mx-auto mb-4"/>
+              <img src="/tailwindcss.png" alt="TailwindCSS" className="mx-auto mb-4"/>
               <h4 className="text-xl font-semibold">TailwindCSS</h4>
             </div>
             <div className="skill-card p-4 text-center rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-400">
-              <img src="https://img.icons8.com/?size=100&id=g9mmSxx3SwAI&format=png&color=000000" alt="Bootstrap" className="mx-auto mb-4"/>
+              <img src="/bootsrap.png" alt="Bootstrap" className="mx-auto mb-4"/>
               <h4 className="text-xl font-semibold">Bootstrap</h4>
             </div>
             <div className="skill-card p-4 text-center rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-400">
-              <img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" alt="Python" className="mx-auto mb-4"/>
+              <img src="/python.png" alt="Python" className="mx-auto mb-4"/>
               <h4 className="text-xl font-semibold">Python</h4>
             </div>
             <div className="skill-card p-4 text-center rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-400">
-              <img src="https://img.icons8.com/?size=100&id=MjuloYXjXHYT&format=png&color=000000" alt="JavaScript" className="mx-auto mb-4"/>
+              <img src="/javascript.png" alt="JavaScript" className="mx-auto mb-4"/>
               <h4 className="text-xl font-semibold">JavaScript</h4>
             </div>
             <div className="skill-card p-4 text-center rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-400">
-              <img src="https://img.icons8.com/?size=100&id=38561&format=png&color=000000" alt="Postgresql" className="mx-auto mb-4"/>
+              <img src="/postresql.png" alt="Postgresql" className="mx-auto mb-4"/>
               <h4 className="text-xl font-semibold">PostgreSQL</h4>
             </div>
             <div className="skill-card p-4 text-center rounded-lg shadow-xltransform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-400">
-              <img src="https://img.icons8.com/?size=100&id=20906&format=png&color=000000" alt="Git" className="mx-auto mb-4"/>
+              <img src="/git.png" alt="Git" className="mx-auto mb-4"/>
               <h4 className="text-xl font-semibold">Git</h4>
             </div>
             <div className="skill-card p-4 text-center rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-400">
-              <img src="https://img.icons8.com/?size=100&id=yjSayFwWHyCo&format=png&color=000000" alt="SQL" className="mx-auto mb-4"/>
+              <img src="/sqlite.png" alt="SQL" className="mx-auto mb-4"/>
               <h4 className="text-xl font-semibold">SQLite</h4>
             </div>
             <div className="skill-card p-4 text-center rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-400">
-              <img src="https://img.icons8.com/?size=100&id=AqYCfGyGXlO7&format=png&color=000000" alt="Flask" className="mx-auto mb-4"/>
+              <img src="/flask.png" alt="Flask" className="mx-auto mb-4"/>
               <h4 className="text-xl font-semibold">Flask</h4>
             </div>
             <div className="skill-card p-4 text-center rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-400">
-              <img src="https://img.icons8.com/?size=100&id=fncdgSAvOcfI&format=png&color=000000" alt="api" className="mx-auto mb-4"/>
-              <h4 className="text-xl font-semibold">API</h4>
+              <img src="/html5.png" alt="html" className="mx-auto mb-4"/>
+              <h4 className="text-xl font-semibold">HTML 5</h4>
             </div>
             
           </div>
