@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Blog from './pages/Blog';
 import Loader from './components/Loader';
+import ScrollToTopButton from './components/ScrollToTopButton';
+import ChatbotButton from './components/ChatBotButton';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -23,6 +25,8 @@ function App() {
     <Router>
       <Loader isVisible={loading} />
       <Navbar />
+      <ChatbotButton />
+      <ScrollToTopButton />
       <div 
         className={`ml-1 mr-1 transition-all duration-1000 ${
           loading ? 'blur-sm opacity-50 pointer-events-none' : 'blur-none opacity-100 pointer-events-auto'
