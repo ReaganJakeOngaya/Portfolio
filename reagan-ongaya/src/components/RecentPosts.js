@@ -9,7 +9,7 @@ const RecentPosts = ({id}) => {
 
   return (
     <div id ={id} className="my-6 py-40 min-h-screen">
-      <h2 className="text-xl font-bold mb-4">Recent Posts</h2>
+      <h2 className="text-xl font-bold mb-4">Recent Updated Posts</h2>
       <div className="space-y-4">
         {posts.map((post) => (
           <div
