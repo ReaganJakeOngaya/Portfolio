@@ -61,7 +61,7 @@ const projects = [
 
 function ProjectsSlide() {
   return (
-    <div className="w-full h-full flex items-start md:items-center justify-center px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 padding-top:10 py-10 md:py-0 overflow-y-auto scrollbar-thin relative noise-overlay">
+    <div className="w-full h-full flex items-start  justify-center px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 padding-top:10 py-10 md:py-0 overflow-y-auto scrollbar-thin relative noise-overlay">
 
       {/* Background */}
       <div className="absolute inset-0 bg-mesh pointer-events-none" />

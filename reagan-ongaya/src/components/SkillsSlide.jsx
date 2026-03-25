@@ -10,6 +10,7 @@ const skills = [
   { name: "Python", level: 70, color: "hsla(210,70%,55%,0.85)" },
   { name: "Git & GitHub", level: 85, color: "hsla(270,55%,55%,0.85)" },
   { name: "UI/UX Design", level: 80, color: "hsla(340,70%,55%,0.85)" },
+  { name: "Artificial Intelligence", level: 30, color: "hsla(237, 98%, 50%, 0.85)" },
 ];
 
 function SkillsSlide({ isActive }) {
