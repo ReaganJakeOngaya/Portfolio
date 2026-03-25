@@ -2,7 +2,7 @@
   "name": "reagan-ongaya",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/reagan-ongaya",
+  "homepage": "./",
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
     "@react-pdf-viewer/core": "^3.12.0",
