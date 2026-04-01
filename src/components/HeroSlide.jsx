@@ -4,7 +4,7 @@ import profileImg from "../assets/reaganongaya.jpg";
 
 const roles = ["Frontend Developer", "React Specialist", "UI/UX Enthusiast", "Problem Solver"];
 
-function HeroSlide({ isActive }) {
+function HeroSlide({ isActive, onNavigate }) {
   const [roleIndex, setRoleIndex] = useState(0);
   const [visible, setVisible] = useState(true);
   const intervalRef = useRef(null);
@@ -129,29 +129,29 @@ function HeroSlide({ isActive }) {
             transition={{ delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-3 pt-2 justify-center lg:justify-start"
           >
-            <a
-              href="#contact"
+            <button
+              onClick={() => onNavigate && onNavigate(5)}
               className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl
                 bg-[hsl(var(--foreground))] text-[hsl(var(--background))]
                 text-sm font-medium tracking-wide
                 shadow-[0_4px_16px_hsla(224,25%,10%,0.18)]
                 hover:shadow-[0_6px_24px_hsla(224,25%,10%,0.26)]
                 hover:scale-[1.03] active:scale-[0.97]
-                transition-all duration-200"
+                transition-all duration-200 cursor-pointer"
             >
               Work with Me
-            </a>
-            <a
-              href="#projects"
+            </button>
+            <button
+              onClick={() => onNavigate && onNavigate(3)}
               className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl
                 dashed-box text-sm font-medium tracking-wide
                 text-[hsl(var(--foreground))]
                 hover:bg-[hsl(var(--muted))]
                 hover:scale-[1.03] active:scale-[0.97]
-                transition-all duration-200"
+                transition-all duration-200 cursor-pointer"
             >
               View Projects
-            </a>
+            </button>
           </motion.div>
 
           {/* Social links */}

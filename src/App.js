@@ -47,7 +47,7 @@ const CAROUSEL_OPTS = {
   dragFree: false,
   containScroll: "trimSnaps",
   skipSnaps: false,
-  duration: 150,
+  duration: 200,
   // Smooth easing function for natural animation
   easing: (t) => {
     // Ease-out cubic for smooth deceleration
@@ -66,6 +66,12 @@ function App() {
   const onSelect = useCallback(() => {
     if (!api) return;
     setActiveIndex(api.selectedScrollSnap());
+  }, [api]);
+
+  // Scroll to a specific slide by index
+  const scrollToSlide = useCallback((slideIndex) => {
+    if (!api) return;
+    api.scrollTo(slideIndex, true);
   }, [api]);
 
   // Register / cleanup the Embla listener properly
@@ -98,7 +104,7 @@ function App() {
 
           {/* Slide 0 — Hero (eager, no Suspense needed) */}
           <CarouselItem>
-            <HeroSlide isActive={activeFlags.hero} />
+            <HeroSlide isActive={activeFlags.hero} onNavigate={scrollToSlide} />
           </CarouselItem>
 
           {/* Slide 1 — About */}
