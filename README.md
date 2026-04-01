@@ -119,6 +119,6 @@ To deploy:
 3. Vercel will automatically build and deploy on every push
 
 ## License
-
-This project is belongs to Reagan Jake Ongaya. 
+Permission is hereby granted to use this work for reference or within your own projects, 
+provided that clear attribution is given.
 
