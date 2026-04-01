@@ -93,7 +93,7 @@ function App() {
   }), [activeIndex]);
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-[hsl(var(--background))]">
+    <div data-testid="app" className="relative min-h-screen w-full overflow-hidden bg-[hsl(var(--background))]">
       <ThemeToggle />
       <Carousel
         opts={CAROUSEL_OPTS}
